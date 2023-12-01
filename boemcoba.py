@@ -1,3 +1,9 @@
+#--> Author's Info
+Author    = 'Dapunta Khurayra X'
+Facebook  = 'Facebook.com/Dapunta.Khurayra.X'
+Instagram = 'Instagram.com/Dapunta.Ratya'
+Whatsapp  = '082245780524'
+YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
 
 #--> Warna
 P = "\x1b[38;5;231m" # Putih
@@ -208,7 +214,7 @@ class menu_create:
         if d == '' or d == ' ':
             d = 1
         print('')
-        l = int(d)*60
+        l = int(d)*10
         for y in range(10000):
             if key/len(auth1) == len(reco)/2: create_fb(); self.hitung(l)
             else: print(reco)
@@ -451,7 +457,7 @@ class create_fb:
             cok += self.perangkat
             next = 'https://m.facebook.com' + fom['action']
             pos = bs(self.xyz.post(next,data=data,headers=self.headers_get,cookies={'cookie':cok},allow_redirects=True).content,'html.parser')
-            tunggu_kode(30)
+            tunggu_kode(10)
             self.scrap5(pos)
         except Exception as e:
             self.printing('CP')
@@ -508,7 +514,7 @@ class create_fb:
             else:
                 id = re.search('c_user=(.*?);',cok).group(1)
                 self.zero_optin()
-                jeda(10)
+                jeda(3)
                 final = check_account(id)
                 if final == 'OK': self.printing('OK')
                 else: self.printing('CP')
